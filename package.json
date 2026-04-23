@@ -1,0 +1,15 @@
+{
+  "name": "monportfolio",
+  "version": "1.0.0",
+  "description": "Portfolio de Danielle Masso",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -c-1 --cors"
+  },
+  "keywords": ["portfolio", "web"],
+  "author": "Danielle Masso",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

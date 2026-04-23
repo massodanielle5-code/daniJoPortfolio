@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+    <title>Portfolio de Danielle Masso</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- ====== En-tête ====== -->
+    <header>
+        <div class="header-inner">
+            <div class="header-left">
+                <img src="./images/profil_portfolio.png" alt="Photo de Danielle Masso" class="photo-profil">
+                <div class="header-text">
+                    <h1>Danielle Masso</h1>
+                    <p>Développeuse Full Stack | Solutions digitales orientées gestion & finance</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#experience">Expérience</a></li>
+                    <li><a href="#projets">Mes projets</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#reference">Références</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====== Section À propos ====== -->
+    <section id="apropos" class="section">
+        <h2>À propos</h2>
+        <p><strong>Je suis Danielle Masso, développeuse full stack avec un parcours en finance-comptabilité et gestion des entreprises.</strong></br>
+         J’ai travaillé au cœur des opérations financières, là où les entreprises font face à des problèmes concrets : organisation, suivi, manque d’outils adaptés.<br/>
+        C’est cette réalité qui m’a poussée vers le développement web.<br/>
+         Mon expérience dans le secteur financier m’a confrontée à des défis </p>
+        <p>opérationnels réels : gestion manuelle, manque d’outils adaptés, inefficacités. Aujourd’hui, je conçois des applications qui transforment ces contraintes en solutions digitales : automatisation, gestion intelligente et amélioration de l’expérience utilisateur.<br/>
+        Mon objectif est simple : <strong>créer des outils utiles, structurés et pensés pour durer</strong></p>
+    </section>
+
+    <!-- ====== Section Expérience ====== -->
+    <section id="experience" class="section">
+        <h2>Expérience professionnelle</h2>
+        <div class="experience-item">
+            <h3>Développeuse Full Stack (Janvier 2026 - Aujourd'hui) - Freelance</h3>
+            <ul>
+                <li>Développement d'applications web accessibles, inclusives et responsives et tableaux de bord</li>
+                <li>Création d'API et déploiement</li>
+                <li>Attribution de nom de domaine et HTTPS</li>
+                <li>Hébergement et gestion de bases de données</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3>Contrôleur financier (Janvier 2023 – Aujourd'hui) – APPTA</h3>
+            <ul>
+                <li>États financiers, paie, déclarations fiscales</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3>Collaboratrice Comptable (Avril 2019 - Mars 2022) – Cabinet Simon POOCH</h3>
+            <ul>
+                <li>Saisie comptable, gestion des stocks, contrôle de caisse</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ====== Section Mes projets ====== -->
+    <section id="projets" class="section">
+        <h2>Mes projets</h2>
+        
+        <div class="project-container">
+            <!-- PROJECT TOGGLE BUTTON -->
+            <button class="project-toggle" id="projectToggle">
+                <div class="project-hero">
+                    <h1>APPTA — Plateforme de gestion de rendez-vous</h1>
+                    <p>
+                        Application web full stack conçue pour améliorer l'accès aux services 
+                        d'une organisation de santé mentale et structurer ses activités.
+                    </p>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+            </button>
+
+            <!-- PROJECT CONTENT (Initially Hidden) -->
+            <div class="project-content" id="projectContent">
+                <div class="project-links">
+                    <a href="https://appta-center.org" target="_blank" class="btn-primary"><i class="fas fa-globe"></i> Voir l'application</a>
+                    <a href="https://github.com/massodanielle5-code/daniJoRepository1" target="_blank" class="btn-secondary"><i class="fas fa-code-branch"></i> GitHub</a>
+                </div>
+
+                <!-- PROBLEME / SOLUTION -->
+                <div class="project-section">
+                    <h3><i class="fas fa-bullseye"></i> Problème</h3>
+                    <p>
+                        L’organisation gérait ses rendez-vous manuellement, ce qui entraînait des erreurs, un manque de suivi et une perte d’efficacité opérationnelle.
+
+Sans outil structuré, il était difficile de coordonner les activités, d’assurer un suivi fiable des patients et de faire évoluer les services.
+                    </p>
+
+                    <h3><i class="fas fa-lightbulb"></i> Solution</h3>
+                    <p>
+                        Développement d'une plateforme complète permettant la réservation, 
+                        le paiement et l'organisation automatisée des rendez-vous <param name="" value=""> services.
+                    </p>
+                </div>
+
+                <!-- FEATURES -->
+                <div class="project-section">
+                    <h3><i class="fas fa-cogs"></i> Fonctionnalités</h3>
+                    <ul>
+                        <li>Prise de rendez-vous avec gestion des créneaux</li>
+                        <li>Paiement mobile</li>
+                        <li>Notifications email automatiques</li>
+                        <li>Synchronisation Google Calendar</li>
+                        <li>Dashboard administrateur</li>
+                    </ul>
+                </div>
+
+                <!-- UX -->
+                <div class="project-section">
+                    <h3><i class="fas fa-brain"></i> Expérience utilisateur</h3>
+                    <ul>
+                        <li>Chatbot conversationnel</li>
+                        <li>Scroll spy dynamique</li>
+                        <li>Bouton retour en haut avec progression</li>
+                    </ul>
+                </div>
+
+                <!-- STACK -->
+                <div class="project-section">
+                    <h3><i class="fas fa-wrench"></i> Stack technique</h3>
+                    <p>
+                        React • Node.js • Express • JavaScript • HTML5 • CSS3 • PostgreSQL • Prisma • Supabase • API REST
+                    </p>
+                </div>
+
+                <!-- DEPLOIEMENT -->
+                <div class="project-section">
+                    <h3><i class="fas fa-cloud"></i> Déploiement</h3>
+                    <p>
+                        Render • Supabase • Uptime Robot • Google Analytics
+                    </p>
+                </div>
+
+                <!-- SÉCURITÉ -->
+                <div class="project-section">
+                    <h3><i class="fas fa-lock"></i> Sécurité & logique métier</h3>
+                    <ul>
+                        <li>Validation des paiements avant confirmation du rendez-vous</li>
+                        <li>Gestion des états (DRAFT, PENDING, VALIDATED)</li>
+                        <li>Authentification et protection des données</li>
+                    </ul>
+                </div>
+
+                <!-- IMPACT -->
+                <div class="project-section highlight">
+                    <h3><i class="fas fa-rocket"></i> Impact & apprentissages</h3>
+                    <p>
+                        Mise en production d'une application complète avec logique métier 
+                        complexe, gestion des paiements et expérience utilisateur optimisée. 
+                        Ce projet reflète ce que je veux construire : des solutions utiles, 
+                        structurées et alignées avec les réalités des organisations et des utilisateurs.
+                    </p>
+                </div>
+
+                <!-- DEMO -->
+                <div class="project-section demo-section">
+                    <h3><i class="fas fa-play-circle"></i> Démo</h3>
+                    <div class="demo-links">
+                        <p><i class="fas fa-link"></i> <strong>Voir l'application :</strong> <a href="https://appta-center.org" target="_blank">appta-center.org</a></p>
+                        <p><i class="fas fa-code-branch"></i> <strong>GitHub :</strong> <a href="https://github.com/massodanielle5-code/daniJoRepository1" target="_blank">github.com/massodanielle5-code/daniJoRepository1</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Section Compétences ====== -->
+    <section id="competences" class="section">
+        <h2>Compétences</h2>
+        <h3>Backend</h3>
+        <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+        </ul>
+        <h3>Frontend</h3>
+        <ul>
+            <li>React</li>
+            <li>JavaScript</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+        </ul>
+        <h3>Base de données</h3>
+        <ul>
+            <li>PostgreSQL</li>
+            <li>Supabase</li>
+            <li>Prisma</li>
+        </ul>
+        <h3>Outils</h3>
+        <ul>
+            <li>Render</li>
+            <li>Uptime Robot</li>
+            <li>Git</li>
+            <li>GitHub</li>
+        </ul>
+        <h3>Autres</h3>
+        <ul>
+            <li>API REST</li>
+            <li>Authentification</li>
+            <li>Paiement mobile</li>
+            <li>Responsive Design</li>
+            <li>Création d'interfaces modernes</li>
+        </ul>
+    </section>
+
+    <!-- ====== Section Formation ====== -->
+    <section id="formation" class="section">
+        <h2>Formation et certifications</h2>
+        <h3>Diplômes</h3>
+        <ul>
+            <li>Licence Professionnelle en Finance Comptabilité - SUPdeCo, Yaoundé, Cameroun (2018 - 2019)</li>
+            <li>Brevet de Technicien Supérieure en Comptabilité et Gestion d'Entreprise - SUPdeCo, Yaoundé, Cameroun (2017 - 2018)</li>
+        </ul>
+        <h3>Certifications</h3>
+        <ul>
+            <li>Développement Web Full Stack – University of London, Coursera (2026)</li>
+            <li>Data-driven Websites – University of London, Coursera (2026)</li>
+            <li>HTML – University of London, Coursera (2026)</li>
+            <li>CSS – University of London, Coursera (2026)</li>
+            <li>Introduction to Data Engineering – IBM, Coursera (2025)</li>
+            <li>React Node MERN Stack – Udemy (2025)</li>
+        </ul>
+    </section>
+
+    <!-- ====== Section Contact ====== -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Yaoundé, Cameroun</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:massodanielle5@gmail.com">massodanielle5@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> +237 675 878 031</p>
+        <p><i class="fas fa-laptop-code"></i> <a href="https://github.com/massodanielle5-code" target="_blank">Mon GitHub</a></p>
+        <p><i class="fas fa-link"></i> <a href="https://www.linkedin.com/in/danielle-masso-8abbb6346" target="_blank">Mon LinkedIn</a></p>
+        
+        <section id="reference" class="section"></section>
+        <h2>Références</h2>
+        <div class="reference-item">
+            <p>M. ONGONO Martin<br>Directeur - APPTA<br>+237 696 89 50 04<br>Ongonomartin788@gmail.com</p>
+        </div>
+        <div class="reference-item">
+            <p>M. POOCH Simon<br>Expert Comptable, Cabinet SIMONPOOCH<br>+237 242 65 14 86<br>cspaa1@hotmail.com</p>
+        </div>
+    </section>
+
+    <!-- Bouton Retour en haut -->
+    <button id="scrollToTopBtn" title="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ====== Pied de page ====== -->
+    <footer>
+        <p>© 2026 Danielle Masso — Tous droits réservés</p>
+    </footer>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>

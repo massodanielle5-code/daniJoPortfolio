@@ -1,238 +1,186 @@
 import "./Formation.css";
 
-function Formation () {
+type FormationItem = {
+  year: string;
+  title: string;
+  institution: string;
+};
+
+type FormationGroup = {
+  number: string;
+  title: string;
+  items: FormationItem[];
+};
+
+const formationGroups: FormationGroup[] = [
+  {
+    number: "01",
+
+    title: "Diplômes",
+
+    items: [
+      {
+        year: "2018 — 2019",
+
+        title: "Licence Professionnelle en Finance Comptabilité",
+
+        institution: "SUPdeCo — Yaoundé, Cameroun",
+      },
+
+      {
+        year: "2017 — 2018",
+
+        title:
+          "Brevet de Technicien Supérieur en Comptabilité et Gestion d'Entreprise",
+
+        institution: "SUPdeCo — Yaoundé, Cameroun",
+      },
+    ],
+  },
+
+  {
+    number: "02",
+
+    title: "Certifications",
+
+    items: [
+      {
+        year: "2026",
+
+        title: "Développement Web Full Stack",
+
+        institution: "University of London — Coursera",
+      },
+
+      {
+        year: "2026",
+
+        title: "Data-driven Websites",
+
+        institution: "University of London — Coursera",
+      },
+
+      {
+        year: "2026",
+
+        title: "HTML",
+
+        institution: "University of London — Coursera",
+      },
+
+      {
+        year: "2026",
+
+        title: "CSS",
+
+        institution: "University of London — Coursera",
+      },
+
+      {
+        year: "2025",
+
+        title: "Introduction to Data Engineering",
+
+        institution: "IBM — Coursera",
+      },
+
+      {
+        year: "2025",
+
+        title: "React Node MERN Stack",
+
+        institution: "Udemy",
+      },
+    ],
+  },
+];
+
+function Formation() {
   return (
-    <section id="formation" className="main-container formation-section">
+    <section
+      id="formation"
+      className="main-container formation-section"
+    >
       <div className="section-content">
 
         {/* ===== TITRE ===== */}
+
         <div className="section-heading projects-heading">
-          <span className="section-label">FORMATION</span>
+          <span className="section-label">
+            FORMATION
+          </span>
 
           <h2>
             Un parcours entre{" "}
-            <span>finance, gestion et développement.</span>
+            <span>
+              finance, gestion et développement.
+            </span>
           </h2>
         </div>
 
         {/* ===== PARCOURS ===== */}
+
         <div className="formation-grid">
 
-          {/* ================================
-              DIPLÔMES
-          ================================= */}
+          {formationGroups.map((group) => (
+            <div
+              className="formation-column"
+              key={group.number}
+            >
 
-          <div className="formation-column">
+              {/* ===== TITRE DE COLONNE ===== */}
 
-            <div className="formation-column-heading">
-              <span className="formation-column-number">
-                01
-              </span>
+              <div className="formation-column-heading">
 
-              <h3>Diplômes</h3>
-            </div>
-
-            <div className="formation-list">
-
-              <article className="formation-item">
-
-                <span className="formation-year">
-                  2018 — 2019
+                <span className="formation-column-number">
+                  {group.number}
                 </span>
 
-                <div className="formation-details">
+                <h3>
+                  {group.title}
+                </h3>
 
-                  <h4>
-                    Licence Professionnelle en
-                    Finance Comptabilité
-                  </h4>
+              </div>
 
-                  <p>
-                    SUPdeCo — Yaoundé, Cameroun
-                  </p>
+              {/* ===== LISTE ===== */}
 
-                </div>
+              <div className="formation-list">
 
-              </article>
+                {group.items.map((item) => (
+                  <article
+                    className="formation-item"
+                    key={`${item.year}-${item.title}`}
+                  >
 
+                    <span className="formation-year">
+                      {item.year}
+                    </span>
 
-              <article className="formation-item">
+                    <div className="formation-details">
 
-                <span className="formation-year">
-                  2017 — 2018
-                </span>
+                      <h4>
+                        {item.title}
+                      </h4>
 
-                <div className="formation-details">
+                      <p>
+                        {item.institution}
+                      </p>
 
-                  <h4>
-                    Brevet de Technicien Supérieur
-                    en Comptabilité et Gestion
-                    d'Entreprise
-                  </h4>
+                    </div>
 
-                  <p>
-                    SUPdeCo — Yaoundé, Cameroun
-                  </p>
+                  </article>
+                ))}
 
-                </div>
-
-              </article>
+              </div>
 
             </div>
-
-          </div>
-
-
-          {/* ================================
-              CERTIFICATIONS
-          ================================= */}
-
-          <div className="formation-column">
-
-            <div className="formation-column-heading">
-              <span className="formation-column-number">
-                02
-              </span>
-
-              <h3>Certifications</h3>
-            </div>
-
-            <div className="formation-list">
-
-              <article className="formation-item">
-
-                <span className="formation-year">
-                  2026
-                </span>
-
-                <div className="formation-details">
-
-                  <h4>
-                    Développement Web Full Stack
-                  </h4>
-
-                  <p>
-                    University of London — Coursera
-                  </p>
-
-                </div>
-
-              </article>
-
-
-              <article className="formation-item">
-
-                <span className="formation-year">
-                  2026
-                </span>
-
-                <div className="formation-details">
-
-                  <h4>
-                    Data-driven Websites
-                  </h4>
-
-                  <p>
-                    University of London — Coursera
-                  </p>
-
-                </div>
-
-              </article>
-
-
-              <article className="formation-item">
-
-                <span className="formation-year">
-                  2026
-                </span>
-
-                <div className="formation-details">
-
-                  <h4>
-                    HTML
-                  </h4>
-
-                  <p>
-                    University of London — Coursera
-                  </p>
-
-                </div>
-
-              </article>
-
-
-              <article className="formation-item">
-
-                <span className="formation-year">
-                  2026
-                </span>
-
-                <div className="formation-details">
-
-                  <h4>
-                    CSS
-                  </h4>
-
-                  <p>
-                    University of London — Coursera
-                  </p>
-
-                </div>
-
-              </article>
-
-
-              <article className="formation-item">
-
-                <span className="formation-year">
-                  2025
-                </span>
-
-                <div className="formation-details">
-
-                  <h4>
-                    Introduction to Data Engineering
-                  </h4>
-
-                  <p>
-                    IBM — Coursera
-                  </p>
-
-                </div>
-
-              </article>
-
-
-              <article className="formation-item">
-
-                <span className="formation-year">
-                  2025
-                </span>
-
-                <div className="formation-details">
-
-                  <h4>
-                    React Node MERN Stack
-                  </h4>
-
-                  <p>
-                    Udemy
-                  </p>
-
-                </div>
-
-              </article>
-
-            </div>
-
-          </div>
+          ))}
 
         </div>
 
       </div>
     </section>
   );
-};
+}
 
 export default Formation;

@@ -334,6 +334,7 @@
   }
 
   .contact-grid {
+    transform: translate(15px);
     grid-template-columns: 1fr;
 
     gap: 55px;

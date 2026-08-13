@@ -7,12 +7,16 @@ import Skills  from "./components/Skills/Skills";
 import Formation from "./components/Formation/Formation";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import ScrollToTopOnLoad from "./components/ScrollToTopOnLoad";
 
 function App() {
 
   return (
     <>
+      <ScrollToTopOnLoad />
+
       <Navbar />
+
       <main className="site-content">
       <Hero />
       <About/>
@@ -22,6 +26,7 @@ function App() {
       <Formation/>
       <Contact/>
       </main>
+
       <Footer/>
     </>
   );

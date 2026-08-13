@@ -1,13 +1,33 @@
 import "./Navbar.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import logo from "../../assets/images/logo.jpeg";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navbarRef = useRef<HTMLElement | null>(null);
   const closeMenu = () => setIsMenuOpen(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav ref={navbarRef} className="navbar">
       <div className="navbar-brand">
-        <span className="logo">MD</span>
+        <img src={logo} alt="Logo Danielle Masso" className="logo" />
         <span className="brand-name">Masso Danielle</span>
       </div>
 
@@ -40,7 +60,13 @@ function Navbar() {
           <a href="#contact" onClick={closeMenu}>
             Contact
           </a>
-          <a className="navbar-cta-mobile" href="https://wa.me/237651104953" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
+          <a
+            className="navbar-cta-mobile"
+            href="https://wa.me/237651104953"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+          >
             Discuter sur WhatsApp
           </a>
         </div>

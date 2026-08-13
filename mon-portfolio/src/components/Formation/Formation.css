@@ -254,6 +254,7 @@
   }
 
   .formation-grid {
+    transform: translateX(15px);
     grid-template-columns: 1fr;
 
     gap: 60px;

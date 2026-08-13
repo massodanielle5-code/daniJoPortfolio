@@ -135,7 +135,7 @@ function Contact () {
                 <h4>M. POOCH Simon</h4>
 
                 <p className="reference-role">
-                  Expert Comptable — Cabinet SIMONPOOCH
+                  Expert Comptable — Cabinet SIMON POOCH
                 </p>
 
                 <span className="reference-availability">

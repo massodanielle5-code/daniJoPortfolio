@@ -1,5 +1,6 @@
 import "./Hero.css";
 import heroImage from "../../assets/images/hero.png";
+import cv from "../../assets/documents/Danielle-Masso-CV.pdf";
 
 function Hero() {
   return (
@@ -33,9 +34,9 @@ function Hero() {
             </a>
 
             <a
-              href="/documents/CV-Danielle-Masso.pdf"
+              href={cv}
               className="hero-secondary-button"
-              download
+              download="Danielle-Masso-CV.pdf"
             >
               Télécharger mon CV
             </a>

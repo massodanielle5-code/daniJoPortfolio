@@ -1,7 +1,15 @@
 import "./Skills.css";
 
+type SkillGroup = {
+  number: string;
+  title: string;
+  description: string;
+  skills: string[];
+};
+
 function Skills(){
-  const skillGroups = [
+
+  const skillGroups: SkillGroup[]= [
     {
       number: "01",
       title: "Backend",
@@ -12,7 +20,7 @@ function Skills(){
       number: "02",
       title: "Frontend",
       description: "Création d'interfaces modernes, responsives et accessibles.",
-      skills: ["React", "JavaScript", "HTML5", "CSS3"],
+      skills: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3"],
     },
     {
       number: "03",

@@ -1,0 +1,102 @@
+.about {
+  position: relative;
+  overflow: hidden;
+
+  padding: 120px 8%;
+
+  background: transparent;
+  color: var(--color-text);
+}
+
+
+
+/* ================================
+   TITRE
+================================ */
+
+.about-heading {
+  max-width: 100%;
+  margin: 0 0 55px 0;
+}
+
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+.about-heading h2 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+
+.about-heading h2 span {
+  color: var(--color-primary);
+}
+
+
+/* ================================
+   TEXTE
+================================ */
+
+.about-text {
+  max-width: 100%;
+  margin: 0;
+}
+
+
+.about-text p {
+  margin: 0 0 22px;
+
+  color: var(--color-text-muted);
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+.about-text strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+
+/* ================================
+   DESKTOP
+================================ */
+
+@media (min-width: 1025px) {
+
+  .about {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  .about-heading {
+    max-width: 750px;
+    margin-bottom: 60px;
+  }
+
+  .about-text {
+    max-width: 850px;
+  }
+
+}

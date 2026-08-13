@@ -1,0 +1,290 @@
+/* ==================================================
+   FORMATION
+================================================== */
+
+.formation-section {
+  padding-bottom: 140px;
+}
+
+
+/* ==================================================
+   GRILLE PRINCIPALE
+================================================== */
+
+.formation-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 70px;
+}
+
+
+/* ==================================================
+   COLONNE
+================================================== */
+
+.formation-column {
+  position: relative;
+}
+
+
+/* ==================================================
+   TITRE DE COLONNE
+================================================== */
+
+.formation-column-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+.formation-column-number {
+  color: var(--color-primary);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.formation-column-heading h3 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 1.25rem;
+
+  font-weight: 600;
+}
+
+
+/* ==================================================
+   LISTE
+================================================== */
+
+.formation-list {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* ==================================================
+   LIGNE VERTICALE
+================================================== */
+
+.formation-list::before {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  bottom: 5px;
+  left: 75px;
+
+  width: 1px;
+
+  background: var(--color-border);
+}
+
+
+/* ==================================================
+   ÉLÉMENT
+================================================== */
+
+.formation-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 75px 1fr;
+
+  gap: 25px;
+
+  padding-bottom: 35px;
+}
+
+
+.formation-item:last-child {
+  padding-bottom: 0;
+}
+
+
+/* ==================================================
+   ANNÉE
+================================================== */
+
+.formation-year {
+  padding-top: 2px;
+
+  color: var(--color-primary);
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   POINT
+================================================== */
+
+.formation-details {
+  position: relative;
+
+  padding-left: 25px;
+}
+
+
+.formation-details::before {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  left: -5px;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--color-primary);
+
+  box-shadow: 0 0 12px var(--color-glow);
+}
+
+
+/* ==================================================
+   TITRE
+================================================== */
+
+.formation-details h4 {
+  margin: 0 0 8px;
+
+  color: var(--color-text);
+
+  font-size: 1rem;
+
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   ÉTABLISSEMENT
+================================================== */
+
+.formation-details p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   HOVER
+================================================== */
+
+.formation-item:hover .formation-details h4 {
+  color: var(--color-primary);
+}
+
+.formation-item:hover .formation-details::before {
+  box-shadow:
+    0 0 12px var(--color-glow),
+    0 0 22px rgba(56, 189, 248, 0.2);
+}
+
+
+/* ==================================================
+   TABLETTE
+================================================== */
+
+@media (max-width: 1024px) {
+
+  .formation-section {
+    padding-bottom: 110px;
+  }
+
+  .formation-grid {
+    gap: 40px;
+  }
+
+  .formation-item {
+    grid-template-columns: 65px 1fr;
+
+    gap: 20px;
+  }
+
+  .formation-list::before {
+    left: 65px;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .formation-section {
+    padding: 90px 8px;
+  }
+
+  .formation-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .formation-column-heading {
+    margin-bottom: 30px;
+  }
+
+  .formation-item {
+    grid-template-columns: 70px 1fr;
+
+    gap: 18px;
+
+    padding-bottom: 30px;
+  }
+
+  .formation-list::before {
+    left: 70px;
+  }
+
+  .formation-details {
+    padding-left: 20px;
+  }
+
+  .formation-details h4 {
+    font-size: 0.95rem;
+  }
+
+  .formation-details p {
+    font-size: 0.85rem;
+  }
+
+}

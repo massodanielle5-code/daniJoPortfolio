@@ -1,0 +1,588 @@
+
+/* ==================================================
+   CARTE DU PROJET
+================================================== */
+
+.project-card {
+  position: relative;
+
+  width: 100%;
+
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(56, 189, 248, 0.055),
+      rgba(5, 11, 24, 0.35)
+    );
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.18);
+
+  overflow: hidden;
+}
+
+
+/* ==================================================
+   BOUTON / EN-TÊTE
+================================================== */
+
+.project-toggle {
+  width: 100%;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+.project-hero {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 70px 1fr 50px;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 40px;
+}
+
+
+/* NUMÉRO */
+
+.project-number {
+  color: var(--color-primary);
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* RÉSUMÉ */
+
+.project-summary {
+  min-width: 0;
+}
+
+
+.project-category {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: var(--color-primary);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.project-summary h3 {
+  margin: 0 0 12px;
+
+  color: var(--color-text);
+
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+
+  line-height: 1.2;
+}
+
+
+.project-summary p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+
+/* ICÔNE */
+
+.toggle-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 50%;
+
+  color: var(--color-primary);
+
+  font-size: 1.5rem;
+
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+
+.project-toggle:hover .toggle-icon {
+  background: var(--color-primary);
+
+  color: var(--color-bg);
+
+  transform: rotate(90deg);
+}
+
+
+/* ==================================================
+   CONTENU DÉPLIABLE
+================================================== */
+
+.project-content {
+  display: none;
+
+  padding: 0 40px 45px;
+
+  border-top: 1px solid var(--color-border);
+}
+
+
+.project-content.visible {
+  display: block;
+}
+
+
+/* ==================================================
+   LIENS
+================================================== */
+
+.project-links {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  padding: 30px 0 45px;
+}
+
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding: 0 20px;
+
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-normal),
+    color var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+
+.btn-primary {
+  background: var(--color-primary);
+
+  color: var(--color-bg);
+
+  box-shadow: 0 0 18px var(--color-glow);
+}
+
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 28px var(--color-glow);
+}
+
+
+.btn-secondary {
+  border: 1px solid var(--color-primary);
+
+  background: transparent;
+
+  color: var(--color-text);
+}
+
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+
+  color: var(--color-bg);
+
+  transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   GRILLE PROBLÈME / SOLUTION
+================================================== */
+
+.project-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 60px;
+
+  margin-bottom: 65px;
+}
+
+
+/* ==================================================
+   SECTIONS INTERNES
+================================================== */
+
+.project-section {
+  margin-bottom: 55px;
+}
+
+
+.project-section-label {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  color: var(--color-primary);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.project-section h4 {
+  margin: 0 0 15px;
+
+  color: var(--color-text);
+
+  font-size: 1.25rem;
+
+  line-height: 1.4;
+}
+
+
+.project-section p {
+  margin: 0 0 16px;
+
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   FEATURES
+================================================== */
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px 35px;
+}
+
+
+.feature-item {
+  display: grid;
+
+  grid-template-columns: 35px 1fr;
+
+  gap: 12px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid rgba(56, 189, 248, 0.08);
+}
+
+
+.feature-item span {
+  color: var(--color-primary);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+}
+
+
+.feature-item p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   STACK
+================================================== */
+
+.tech-stack {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.tech-stack span {
+  padding: 8px 12px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 6px;
+
+  background: rgba(56, 189, 248, 0.04);
+
+  color: var(--color-text-muted);
+
+  font-size: 0.85rem;
+}
+
+
+/* ==================================================
+   LISTE
+================================================== */
+
+.project-list {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.project-list li {
+  position: relative;
+
+  margin-bottom: 12px;
+
+  padding-left: 20px;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.7;
+}
+
+
+.project-list li::before {
+  content: "→";
+
+  position: absolute;
+
+  left: 0;
+
+  color: var(--color-primary);
+}
+
+
+/* ==================================================
+   IMPACT
+================================================== */
+
+.project-impact {
+  margin: 20px 0 65px;
+
+  padding: 30px;
+
+  border-left: 2px solid var(--color-primary);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(56, 189, 248, 0.07),
+      transparent
+    );
+}
+
+
+.project-impact h4 {
+  margin: 0 0 15px;
+
+  color: var(--color-text);
+
+  font-size: 1.4rem;
+}
+
+
+/* ==================================================
+   DÉMO
+================================================== */
+
+.project-demo {
+  padding-top: 10px;
+}
+
+
+.project-demo-heading h4 {
+  margin: 0 0 25px;
+
+  color: var(--color-text);
+
+  font-size: 1.25rem;
+}
+
+
+.video-demo {
+  display: block;
+
+  width: 100%;
+
+  max-height: 600px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 10px;
+
+  background: #000;
+}
+
+
+/* ==================================================
+   TABLETTE
+================================================== */
+
+@media (max-width: 1024px) {
+
+  .project-hero {
+    grid-template-columns: 45px 1fr 45px;
+
+    gap: 20px;
+
+    padding: 32px;
+  }
+
+  .project-content {
+    padding: 0 32px 35px;
+  }
+
+  .project-grid {
+    gap: 35px;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .projects-section {
+    padding: 90px 8px;
+  }
+
+  .project-card {
+    border-radius: 12px;
+  }
+
+  .project-hero {
+    grid-template-columns: 1fr 40px;
+
+    gap: 15px;
+
+    padding: 28px 22px;
+  }
+
+  .project-number {
+    display: none;
+  }
+
+  .project-summary h3 {
+    font-size: 1.35rem;
+  }
+
+  .project-summary p {
+    font-size: 0.95rem;
+  }
+
+  .project-content {
+    padding: 0 22px 30px;
+  }
+
+  .project-links {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 25px 0 35px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 45px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-section {
+    margin-bottom: 45px;
+  }
+
+  .project-impact {
+    padding: 22px;
+
+    margin-bottom: 45px;
+  }
+
+  .projects-heading{
+    transform: translateX(15px);
+  }
+
+}

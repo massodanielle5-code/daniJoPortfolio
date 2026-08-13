@@ -1,0 +1,360 @@
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact-section {
+  padding-bottom: 100px;
+}
+
+
+/* ==================================================
+   GRILLE
+================================================== */
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  gap: 70px;
+
+  align-items: start;
+}
+
+
+/* ==================================================
+   INTRODUCTION
+================================================== */
+
+.contact-introduction {
+  max-width: 500px;
+
+  margin-bottom: 40px;
+}
+
+
+.contact-introduction h3 {
+  margin: 0 0 15px;
+
+  color: var(--color-text);
+
+  font-size: 1.5rem;
+
+  line-height: 1.3;
+}
+
+
+.contact-introduction p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   INFORMATIONS CONTACT
+================================================== */
+
+.contact-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.contact-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid rgba(56, 189, 248, 0.08);
+
+  color: var(--color-text);
+
+  text-decoration: none;
+
+  transition:
+    color var(--transition-normal),
+    transform var(--transition-fast);
+}
+
+
+.contact-item:hover {
+  color: var(--color-primary);
+
+  transform: translateX(4px);
+}
+
+
+/* ==================================================
+   ICÔNE
+================================================== */
+
+.contact-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 8px;
+
+  color: var(--color-primary);
+
+  font-size: 1rem;
+}
+
+
+.contact-item span:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.contact-item small {
+  color: var(--color-text-muted);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+
+/* ==================================================
+   WHATSAPP
+================================================== */
+
+.contact-whatsapp {
+  color: var(--color-primary);
+}
+
+
+.contact-whatsapp .contact-icon {
+  background: rgba(56, 189, 248, 0.06);
+}
+
+
+/* ==================================================
+   RÉSEAUX
+================================================== */
+
+.contact-socials {
+  display: flex;
+
+  gap: 25px;
+
+  margin-top: 30px;
+}
+
+
+.contact-socials a {
+  color: var(--color-text-muted);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color var(--transition-normal);
+}
+
+
+.contact-socials a:hover {
+  color: var(--color-primary);
+}
+
+
+/* ==================================================
+   RÉFÉRENCES
+================================================== */
+
+.references-block {
+  padding-left: 30px;
+
+  border-left: 1px solid var(--color-border);
+}
+
+
+.references-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+
+.contact-section-number {
+  color: var(--color-primary);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.references-heading h3 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 1.2rem;
+
+  line-height: 1.4;
+}
+
+
+/* ==================================================
+   CARTE RÉFÉRENCE
+================================================== */
+.references-introduction {
+  margin: 0 0 10px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+}
+
+.reference-card {
+  display: grid;
+
+  grid-template-columns: 35px 1fr;
+
+  gap: 15px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid rgba(56, 189, 248, 0.08);
+}
+
+
+.reference-card:last-child {
+  border-bottom: none;
+}
+
+
+.reference-number {
+  color: var(--color-primary);
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+}
+
+
+.reference-card h4 {
+  margin: 0 0 7px;
+
+  color: var(--color-text);
+
+  font-size: 1rem;
+}
+
+
+.reference-role {
+  margin: 0 0 12px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.85rem;
+
+  line-height: 1.5;
+}
+
+
+.reference-availability {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.8rem;
+
+  font-style: italic;
+}
+
+/* ==================================================
+   TABLETTE
+================================================== */
+
+@media (max-width: 1024px) {
+
+  .contact-section {
+    padding-bottom: 90px;
+  }
+
+  .contact-grid {
+    gap: 45px;
+  }
+
+  .references-block {
+    padding-left: 25px;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    padding: 90px 8px 70px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .references-block {
+    padding-left: 0;
+
+    padding-top: 40px;
+
+    border-left: none;
+
+    border-top: 1px solid var(--color-border);
+  }
+
+  .contact-introduction h3 {
+    font-size: 1.3rem;
+  }
+
+  .contact-socials {
+    gap: 20px;
+  }
+
+}

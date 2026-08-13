@@ -51,7 +51,7 @@ function Navbar() {
         <a href="#experience">Expérience</a>
         <a href="#projects">Mes projets</a>
         <a href="#skills">Compétences</a>
-        <a href="#education">Formation</a>
+        <a href="#formation">Formation</a>
         <a href="#contact">Contact</a>
       </div>
 

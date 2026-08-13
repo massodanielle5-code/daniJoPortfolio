@@ -1,6 +1,6 @@
 import "./Formation.css";
 
-const Formation = () => {
+function Formation () {
   return (
     <section id="formation" className="main-container formation-section">
       <div className="section-content">

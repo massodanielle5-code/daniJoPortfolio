@@ -19,13 +19,13 @@
 
   border-bottom: 1px solid rgba(0, 180, 255, 0.08);
 
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
-transition:
-  background-color 0.3s ease,
-  backdrop-filter 0.3s ease,
-  box-shadow 0.3s ease;
+  transition:
+    background-color var(--transition-normal),
+    backdrop-filter var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
 .navbar a {

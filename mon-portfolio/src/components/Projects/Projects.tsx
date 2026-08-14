@@ -125,10 +125,9 @@ const projects: Project[] = [
 
     applicationUrl: "https://appta-center.org",
 
-    githubUrl:
-      "https://github.com/massodanielle5-code/daniJoRepository1",
+    githubUrl: "https://github.com/massodanielle5-code/daniJoRepository1",
   },
-    {
+  {
     number: "02",
 
     category: "SINGLE PAGE APPLICATION — PORTFOLIO",
@@ -189,7 +188,7 @@ const projects: Project[] = [
       "Portfolio déployé sur Netlify avec une interface responsive adaptée aux différents formats d'écran.",
 
     security: [
-      "Utilisation de liens externes avec rel=\"noopener noreferrer\"",
+      'Utilisation de liens externes avec rel="noopener noreferrer"',
 
       "Navigation accessible au clavier",
 
@@ -199,7 +198,8 @@ const projects: Project[] = [
     ],
 
     impact: {
-      title: "Un projet qui reflète ma transition vers le développement logiciel.",
+      title:
+        "Un projet qui reflète ma transition vers le développement logiciel.",
 
       paragraphs: [
         "Ce portfolio constitue lui-même un projet de développement permettant de mettre en pratique React, TypeScript, responsive design, gestion d'état et conception d'interfaces modernes.",
@@ -208,10 +208,8 @@ const projects: Project[] = [
       ],
     },
 
-    applicationUrl:
-      "https://massodanielle-portfolio.netlify.app",
-    githubUrl:
-      "https://github.com/massodanielle5-code/daniJoPortfolio",
+    applicationUrl: "https://massodanielle-portfolio.netlify.app",
+    githubUrl: "https://github.com/massodanielle5-code/daniJoPortfolio",
   },
 ];
 
@@ -220,14 +218,13 @@ function Projects() {
 
   const toggleProject = (projectNumber: string) => {
     setOpenProject((current) =>
-      current === projectNumber ? null : projectNumber
+      current === projectNumber ? null : projectNumber,
     );
   };
 
   return (
     <section id="projects" className="main-container projects-section">
       <div className="section-content">
-
         {/* ===== TITRE DE SECTION ===== */}
         <div className="section-heading projects-heading">
           <span className="section-label">MES PROJETS</span>
@@ -247,7 +244,6 @@ function Projects() {
               className={`project-card ${isOpen ? "open" : ""}`}
               key={project.number}
             >
-
               {/* ===== EN-TÊTE CLIQUABLE ===== */}
               <button
                 type="button"
@@ -257,45 +253,27 @@ function Projects() {
                 aria-controls={`project-content-${project.number}`}
               >
                 <div className="project-hero">
-
-                  <div className="project-number">
-                    {project.number}
-                  </div>
+                  <div className="project-number">{project.number}</div>
 
                   <div className="project-summary">
+                    <span className="project-category">{project.category}</span>
 
-                    <span className="project-category">
-                      {project.category}
-                    </span>
+                    <h3>{project.title}</h3>
 
-                    <h3>
-                      {project.title}
-                    </h3>
-
-                    <p>
-                      {project.description}
-                    </p>
-
+                    <p>{project.description}</p>
                   </div>
 
-                  <span className="toggle-icon">
-                    {isOpen ? "−" : "+"}
-                  </span>
-
+                  <span className="toggle-icon">{isOpen ? "−" : "+"}</span>
                 </div>
               </button>
 
               {/* ===== CONTENU DU PROJET ===== */}
               <div
                 id={`project-content-${project.number}`}
-                className={`project-content ${
-                  isOpen ? "visible" : ""
-                }`}
+                className={`project-content ${isOpen ? "visible" : ""}`}
               >
-
                 {/* ===== LIENS ===== */}
                 <div className="project-links">
-
                   <a
                     href={project.applicationUrl}
                     target="_blank"
@@ -313,209 +291,125 @@ function Projects() {
                   >
                     Voir le code GitHub
                   </a>
-
                 </div>
 
                 {/* ===== PROBLÈME / SOLUTION ===== */}
                 <div className="project-grid">
-
                   <div className="project-section">
+                    <span className="project-section-label">I — PROBLÈME</span>
 
-                    <span className="project-section-label">
-                      I — PROBLÈME
-                    </span>
-
-                    <h4>
-                      {project.problem.title}
-                    </h4>
+                    <h4>{project.problem.title}</h4>
 
                     {project.problem.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>
-                        {paragraph}
-                      </p>
+                      <p key={paragraph}>{paragraph}</p>
                     ))}
-
                   </div>
 
                   <div className="project-section">
+                    <span className="project-section-label">II — SOLUTION</span>
 
-                    <span className="project-section-label">
-                      II — SOLUTION
-                    </span>
+                    <h4>{project.solution.title}</h4>
 
-                    <h4>
-                      {project.solution.title}
-                    </h4>
-
-                    <p>
-                      {project.solution.description}
-                    </p>
-
+                    <p>{project.solution.description}</p>
                   </div>
-
                 </div>
 
                 {/* ===== FONCTIONNALITÉS ===== */}
                 <div className="project-section">
-
                   <span className="project-section-label">
                     III — FONCTIONNALITÉS
                   </span>
 
                   <div className="feature-grid">
-
                     {project.features.map((feature, index) => (
-                      <div
-                        className="feature-item"
-                        key={feature}
-                      >
-                        <span>
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
+                      <div className="feature-item" key={feature}>
+                        <span>{String(index + 1).padStart(2, "0")}</span>
 
-                        <p>
-                          {feature}
-                        </p>
+                        <p>{feature}</p>
                       </div>
                     ))}
-
                   </div>
-
                 </div>
 
                 {/* ===== EXPÉRIENCE UTILISATEUR ===== */}
                 <div className="project-section">
-
                   <span className="project-section-label">
                     IV — EXPÉRIENCE UTILISATEUR
                   </span>
 
                   <div className="feature-grid">
+                    {project.userExperience.map((feature, index) => (
+                      <div className="feature-item" key={feature}>
+                        <span>{String(index + 1).padStart(2, "0")}</span>
 
-                    {project.userExperience.map(
-                      (feature, index) => (
-                        <div
-                          className="feature-item"
-                          key={feature}
-                        >
-                          <span>
-                            {String(index + 1).padStart(2, "0")}
-                          </span>
-
-                          <p>
-                            {feature}
-                          </p>
-                        </div>
-                      )
-                    )}
-
+                        <p>{feature}</p>
+                      </div>
+                    ))}
                   </div>
-
                 </div>
 
                 {/* ===== STACK ===== */}
                 <div className="project-section">
-
                   <span className="project-section-label">
                     V — STACK TECHNIQUE
                   </span>
 
                   <div className="tech-stack">
-
                     {project.stack.map((technology) => (
-                      <span key={technology}>
-                        {technology}
-                      </span>
+                      <span key={technology}>{technology}</span>
                     ))}
-
                   </div>
-
                 </div>
 
                 {/* ===== DÉPLOIEMENT ===== */}
                 <div className="project-section">
-
                   <span className="project-section-label">
                     VI — DÉPLOIEMENT
                   </span>
 
-                  <p>
-                    {project.deployment}
-                  </p>
-
+                  <p>{project.deployment}</p>
                 </div>
 
                 {/* ===== SÉCURITÉ ===== */}
                 <div className="project-section">
-
                   <span className="project-section-label">
                     VII — SÉCURITÉ & LOGIQUE MÉTIER
                   </span>
 
                   <ul className="project-list">
-
                     {project.security.map((item) => (
-                      <li key={item}>
-                        {item}
-                      </li>
+                      <li key={item}>{item}</li>
                     ))}
-
                   </ul>
-
                 </div>
 
                 {/* ===== IMPACT ===== */}
                 <div className="project-impact">
+                  <span className="project-section-label">VIII — IMPACT</span>
 
-                  <span className="project-section-label">
-                    VIII — IMPACT
-                  </span>
+                  <h4>{project.impact.title}</h4>
 
-                  <h4>
-                    {project.impact.title}
-                  </h4>
-
-                  {project.impact.paragraphs.map(
-                    (paragraph) => (
-                      <p key={paragraph}>
-                        {paragraph}
-                      </p>
-                    )
-                  )}
-
+                  {project.impact.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
                 </div>
 
                 {/* ===== DÉMO ===== */}
-                <div className="project-demo">
+                {project.demo && (
+                  <div className="project-demo">
+                    <div className="project-demo-heading">
+                      <span className="project-section-label">IX — DÉMO</span>
 
-                  <div className="project-demo-heading">
+                      <h4>{project.demo.title}</h4>
+                    </div>
 
-                    <span className="project-section-label">
-                      IX — DÉMO
-                    </span>
-
-                    <h4>
-                      {project.demo?.title}
-                    </h4>
-
+                    <video className="video-demo" controls preload="metadata">
+                      <source src={project.demo.video} type="video/mp4" />
+                      Votre navigateur ne supporte pas la lecture de cette
+                      vidéo.
+                    </video>
                   </div>
-
-                  <video
-                    className="video-demo"
-                    controls
-                    preload="metadata"
-                  >
-                    <source
-                      src={project.demo?.video}
-                      type="video/mp4"
-                    />
-
-                    Votre navigateur ne supporte pas la lecture de
-                    cette vidéo.
-                  </video>
-
-                </div>
-
+                )}
               </div>
             </article>
           );

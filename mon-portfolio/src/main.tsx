@@ -5,8 +5,6 @@ import App from './App.tsx'
 import ReactGA from 'react-ga4';
 
 ReactGA.initialize('G-EVY3613F93'); 
-
-// Envoyer la première vue de page
 ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
 
 createRoot(document.getElementById('root')!).render(

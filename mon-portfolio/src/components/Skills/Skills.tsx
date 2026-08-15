@@ -32,7 +32,7 @@ function Skills(){
       number: "04",
       title: "Outils & déploiement",
       description: "Développement, versionnement et mise en production.",
-      skills: ["Render", "Uptime Robot", "Git", "GitHub"],
+      skills: ["Render", "Netlify", "Uptime Robot", "Git", "GitHub"],
     },
     {
       number: "05",

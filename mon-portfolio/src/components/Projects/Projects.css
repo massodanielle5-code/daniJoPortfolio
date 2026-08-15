@@ -484,6 +484,27 @@
   background: #000;
 }
 
+.project-status {
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  margin-top: 14px;
+  padding: 6px 12px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+
+  color: var(--color-primary);
+
+  background: rgba(56, 189, 248, 0.06);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 
 /* ==================================================
    TABLETTE

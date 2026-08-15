@@ -8,6 +8,8 @@ type Project = {
   title: string;
   description: string;
 
+  status?: string;
+
   problem: {
     title: string;
     paragraphs: string[];
@@ -34,11 +36,17 @@ type Project = {
     video: string;
   };
 
-  applicationUrl: string;
-  githubUrl: string;
+  applicationUrl?: string;
+  githubUrl?: string;
 };
 
+
 const projects: Project[] = [
+
+  /* ==================================================
+     PROJET 01 — APPTA
+  ================================================== */
+
   {
     number: "01",
 
@@ -125,8 +133,15 @@ const projects: Project[] = [
 
     applicationUrl: "https://appta-center.org",
 
-    githubUrl: "https://github.com/massodanielle5-code/daniJoRepository1",
+    githubUrl:
+      "https://github.com/massodanielle5-code/daniJoRepository1",
   },
+
+
+  /* ==================================================
+     PROJET 02 — PORTFOLIO
+  ================================================== */
+
   {
     number: "02",
 
@@ -208,215 +223,521 @@ const projects: Project[] = [
       ],
     },
 
-    applicationUrl: "https://massodanielle-portfolio.netlify.app",
-    githubUrl: "https://github.com/massodanielle5-code/daniJoPortfolio",
+    applicationUrl:
+      "https://massodanielle-portfolio.netlify.app",
+
+    githubUrl:
+      "https://github.com/massodanielle5-code/daniJoPortfolio",
+  },
+
+
+  /* ==================================================
+     PROJET 03 — ODOO
+  ================================================== */
+
+  {
+    number: "03",
+
+    category: "ERP & TRANSFORMATION DIGITALE",
+
+    title:
+      "Odoo — Digitalisation et gestion intégrée d'une activité commerciale",
+
+    description:
+      "Projet de mise en place et de paramétrage d'un environnement Odoo pour centraliser les achats, les ventes, les stocks, la facturation et les paiements d'une activité commerciale.",
+
+    status: "EN COURS DE DÉVELOPPEMENT",
+
+    problem: {
+      title: "Des processus commerciaux à centraliser",
+
+      paragraphs: [
+        "L'objectif est de structurer les opérations d'une épicerie au sein d'un même environnement afin de mieux suivre les achats, les ventes, les stocks, les factures et les paiements.",
+
+        "Le projet permet également de relier les opérations commerciales aux processus de gestion et de comptabilité afin d'obtenir une meilleure visibilité sur l'activité.",
+      ],
+    },
+
+    solution: {
+      title: "Une gestion intégrée avec Odoo",
+
+      description:
+        "Mise en place et paramétrage d'Odoo 19 Community pour modéliser les principaux processus commerciaux, depuis les achats et la réception des produits jusqu'à la vente, la facturation et le règlement.",
+    },
+
+    features: [
+      "Création et gestion des fournisseurs",
+      "Création des produits et configuration des catégories",
+      "Demandes de prix et bons de commande",
+      "Validation et réception des commandes",
+      "Gestion des livraisons et des réceptions partielles",
+      "Suivi du stock disponible et prévisionnel",
+      "Facturation des achats",
+      "Gestion des paiements",
+      "Suivi des opérations de caisse, banque et chèques",
+    ],
+
+    userExperience: [
+      "Gestion de plusieurs utilisateurs",
+      "Attribution des rôles et des droits d'accès",
+      "Centralisation des opérations commerciales",
+      "Suivi de l'état des commandes et des livraisons",
+      "Suivi du stock prévisionnel",
+      "Organisation des processus d'achat, de vente et de paiement",
+    ],
+
+    stack: [
+      "Odoo 19 Community",
+      "Python",
+      "JavaScript",
+      "XML",
+      "OWL",
+      "Odoo ORM",
+      "PostgreSQL 18",
+      "Achats",
+      "Ventes",
+      "Inventaire",
+      "Facturation",
+      "Comptabilité",
+    ],
+
+    deployment:
+      "Projet actuellement en cours de développement, de configuration et de paramétrage dans un environnement Odoo 19 Community avec PostgreSQL 18.",
+
+    security: [
+      "Gestion de plusieurs utilisateurs",
+
+      "Configuration des rôles et des droits d'accès",
+
+      "Organisation des accès selon les responsabilités",
+
+      "Structuration des données et des processus métier",
+
+      "Utilisation du système de permissions d'Odoo pour contrôler l'accès aux fonctionnalités",
+    ],
+
+    impact: {
+      title:
+        "Un projet orienté processus métier et transformation digitale.",
+
+      paragraphs: [
+        "Ce projet permet de mettre en pratique la compréhension des processus d'entreprise et leur traduction dans un système ERP intégré.",
+
+        "Il complète mon profil de développeuse en valorisant également mon expérience en finance, comptabilité et gestion des entreprises.",
+
+        "Le projet est actuellement en cours de développement et sera progressivement enrichi avec les configurations et personnalisations nécessaires.",
+      ],
+    },
   },
 ];
 
+
 function Projects() {
+
   const [openProject, setOpenProject] = useState<string | null>(null);
 
+
   const toggleProject = (projectNumber: string) => {
+
     setOpenProject((current) =>
-      current === projectNumber ? null : projectNumber,
+      current === projectNumber
+        ? null
+        : projectNumber,
     );
   };
 
+
   return (
-    <section id="projects" className="main-container projects-section">
+    <section
+      id="projects"
+      className="main-container projects-section"
+    >
+
       <div className="section-content">
+
         {/* ===== TITRE DE SECTION ===== */}
+
         <div className="section-heading projects-heading">
-          <span className="section-label">MES PROJETS</span>
+
+          <span className="section-label">
+            MES PROJETS
+          </span>
 
           <h2>
             Des applications conçues pour{" "}
-            <span>répondre à des besoins réels.</span>
+            <span>
+              répondre à des besoins réels.
+            </span>
           </h2>
+
         </div>
 
+
         {/* ===== PROJETS ===== */}
+
         {projects.map((project) => {
-          const isOpen = openProject === project.number;
+
+          const isOpen =
+            openProject === project.number;
+
 
           return (
+
             <article
-              className={`project-card ${isOpen ? "open" : ""}`}
+              className={`project-card ${
+                isOpen ? "open" : ""
+              }`}
               key={project.number}
             >
+
               {/* ===== EN-TÊTE CLIQUABLE ===== */}
+
               <button
                 type="button"
                 className="project-toggle"
-                onClick={() => toggleProject(project.number)}
+                onClick={() =>
+                  toggleProject(project.number)
+                }
                 aria-expanded={isOpen}
                 aria-controls={`project-content-${project.number}`}
               >
+
                 <div className="project-hero">
-                  <div className="project-number">{project.number}</div>
+
+                  <div className="project-number">
+                    {project.number}
+                  </div>
+
 
                   <div className="project-summary">
-                    <span className="project-category">{project.category}</span>
 
-                    <h3>{project.title}</h3>
+                    <span className="project-category">
+                      {project.category}
+                    </span>
 
-                    <p>{project.description}</p>
+                    <h3>
+                      {project.title}
+                    </h3>
+
+                    <p>
+                      {project.description}
+                    </p>
+
+                    {project.status && (
+                      <span className="project-status">
+                        {project.status}
+                      </span>
+                    )}
+
                   </div>
 
-                  <span className="toggle-icon">{isOpen ? "−" : "+"}</span>
+
+                  <span className="toggle-icon">
+                    {isOpen ? "−" : "+"}
+                  </span>
+
                 </div>
+
               </button>
 
+
               {/* ===== CONTENU DU PROJET ===== */}
+
               <div
                 id={`project-content-${project.number}`}
-                className={`project-content ${isOpen ? "visible" : ""}`}
+                className={`project-content ${
+                  isOpen ? "visible" : ""
+                }`}
               >
-                {/* ===== LIENS ===== */}
-                <div className="project-links">
-                  <a
-                    href={project.applicationUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary"
-                  >
-                    Voir l'application
-                  </a>
 
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-secondary"
-                  >
-                    Voir le code GitHub
-                  </a>
-                </div>
+                {/* ===== LIENS ===== */}
+
+                {(project.applicationUrl ||
+                  project.githubUrl) && (
+
+                  <div className="project-links">
+
+                    {project.applicationUrl && (
+                      <a
+                        href={project.applicationUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary"
+                      >
+                        Voir l'application
+                      </a>
+                    )}
+
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-secondary"
+                      >
+                        Voir le code GitHub
+                      </a>
+                    )}
+
+                  </div>
+                )}
+
 
                 {/* ===== PROBLÈME / SOLUTION ===== */}
+
                 <div className="project-grid">
-                  <div className="project-section">
-                    <span className="project-section-label">I — PROBLÈME</span>
-
-                    <h4>{project.problem.title}</h4>
-
-                    {project.problem.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
 
                   <div className="project-section">
-                    <span className="project-section-label">II — SOLUTION</span>
 
-                    <h4>{project.solution.title}</h4>
+                    <span className="project-section-label">
+                      I — PROBLÈME
+                    </span>
 
-                    <p>{project.solution.description}</p>
+                    <h4>
+                      {project.problem.title}
+                    </h4>
+
+                    {project.problem.paragraphs.map(
+                      (paragraph) => (
+                        <p key={paragraph}>
+                          {paragraph}
+                        </p>
+                      )
+                    )}
+
                   </div>
+
+
+                  <div className="project-section">
+
+                    <span className="project-section-label">
+                      II — SOLUTION
+                    </span>
+
+                    <h4>
+                      {project.solution.title}
+                    </h4>
+
+                    <p>
+                      {project.solution.description}
+                    </p>
+
+                  </div>
+
                 </div>
 
+
                 {/* ===== FONCTIONNALITÉS ===== */}
+
                 <div className="project-section">
+
                   <span className="project-section-label">
                     III — FONCTIONNALITÉS
                   </span>
 
                   <div className="feature-grid">
-                    {project.features.map((feature, index) => (
-                      <div className="feature-item" key={feature}>
-                        <span>{String(index + 1).padStart(2, "0")}</span>
 
-                        <p>{feature}</p>
-                      </div>
-                    ))}
+                    {project.features.map(
+                      (feature, index) => (
+
+                        <div
+                          className="feature-item"
+                          key={feature}
+                        >
+
+                          <span>
+                            {String(index + 1).padStart(2, "0")}
+                          </span>
+
+                          <p>
+                            {feature}
+                          </p>
+
+                        </div>
+
+                      )
+                    )}
+
                   </div>
+
                 </div>
 
+
                 {/* ===== EXPÉRIENCE UTILISATEUR ===== */}
+
                 <div className="project-section">
+
                   <span className="project-section-label">
                     IV — EXPÉRIENCE UTILISATEUR
                   </span>
 
                   <div className="feature-grid">
-                    {project.userExperience.map((feature, index) => (
-                      <div className="feature-item" key={feature}>
-                        <span>{String(index + 1).padStart(2, "0")}</span>
 
-                        <p>{feature}</p>
-                      </div>
-                    ))}
+                    {project.userExperience.map(
+                      (feature, index) => (
+
+                        <div
+                          className="feature-item"
+                          key={feature}
+                        >
+
+                          <span>
+                            {String(index + 1).padStart(2, "0")}
+                          </span>
+
+                          <p>
+                            {feature}
+                          </p>
+
+                        </div>
+
+                      )
+                    )}
+
                   </div>
+
                 </div>
 
+
                 {/* ===== STACK ===== */}
+
                 <div className="project-section">
+
                   <span className="project-section-label">
                     V — STACK TECHNIQUE
                   </span>
 
                   <div className="tech-stack">
-                    {project.stack.map((technology) => (
-                      <span key={technology}>{technology}</span>
-                    ))}
+
+                    {project.stack.map(
+                      (technology) => (
+
+                        <span key={technology}>
+                          {technology}
+                        </span>
+
+                      )
+                    )}
+
                   </div>
+
                 </div>
+
 
                 {/* ===== DÉPLOIEMENT ===== */}
+
                 <div className="project-section">
+
                   <span className="project-section-label">
-                    VI — DÉPLOIEMENT
+                    VI — DÉPLOIEMENT / ÉTAT
                   </span>
 
-                  <p>{project.deployment}</p>
+                  <p>
+                    {project.deployment}
+                  </p>
+
                 </div>
 
+
                 {/* ===== SÉCURITÉ ===== */}
+
                 <div className="project-section">
+
                   <span className="project-section-label">
                     VII — SÉCURITÉ & LOGIQUE MÉTIER
                   </span>
 
                   <ul className="project-list">
-                    {project.security.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
+
+                    {project.security.map(
+                      (item) => (
+
+                        <li key={item}>
+                          {item}
+                        </li>
+
+                      )
+                    )}
+
                   </ul>
+
                 </div>
+
 
                 {/* ===== IMPACT ===== */}
+
                 <div className="project-impact">
-                  <span className="project-section-label">VIII — IMPACT</span>
 
-                  <h4>{project.impact.title}</h4>
+                  <span className="project-section-label">
+                    VIII — IMPACT
+                  </span>
 
-                  {project.impact.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
+                  <h4>
+                    {project.impact.title}
+                  </h4>
+
+                  {project.impact.paragraphs.map(
+                    (paragraph) => (
+
+                      <p key={paragraph}>
+                        {paragraph}
+                      </p>
+
+                    )
+                  )}
+
                 </div>
 
-                {/* ===== DÉMO ===== */}
-                {project.demo && (
-                  <div className="project-demo">
-                    <div className="project-demo-heading">
-                      <span className="project-section-label">IX — DÉMO</span>
 
-                      <h4>{project.demo.title}</h4>
+                {/* ===== DÉMO ===== */}
+
+                {project.demo && (
+
+                  <div className="project-demo">
+
+                    <div className="project-demo-heading">
+
+                      <span className="project-section-label">
+                        IX — DÉMO
+                      </span>
+
+                      <h4>
+                        {project.demo.title}
+                      </h4>
+
                     </div>
 
-                    <video className="video-demo" controls preload="metadata">
-                      <source src={project.demo.video} type="video/mp4" />
-                      Votre navigateur ne supporte pas la lecture de cette
-                      vidéo.
+                    <video
+                      className="video-demo"
+                      controls
+                      preload="metadata"
+                    >
+
+                      <source
+                        src={project.demo.video}
+                        type="video/mp4"
+                      />
+
+                      Votre navigateur ne supporte pas
+                      la lecture de cette vidéo.
+
                     </video>
+
                   </div>
+
                 )}
+
               </div>
+
             </article>
           );
         })}
+
       </div>
+
     </section>
   );
 }
+
 
 export default Projects;
